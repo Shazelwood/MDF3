@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        >
+        <ImageButton
+            android:id="@+id/previousBTN"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <ImageButton
+            android:id="@+id/pauseBTN"
+            android:src="@android:drawable/ic_media_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <ImageButton
+            android:id="@+id/playBTN"
+            android:src="@android:drawable/ic_media_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:textColor="@android:color/white"
+            android:text="STOP"
+            android:id="@+id/stopBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <ImageButton
+            android:id="@+id/nextBTN"
+            android:src="@android:drawable/ic_media_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <SeekBar
+            android:id="@+id/seekBAR"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Repeat"
+            android:textColor="@android:color/white"
+            android:id="@+id/repeatBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="Shuffle"
+            android:textColor="@android:color/white"
+            android:id="@+id/shuffleBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+</LinearLayout>
