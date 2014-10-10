@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hazelwood.maps.ViewForm_Fragment">
+
+    <TextView
+        android:id="@+id/fieldONE"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/fieldTWO"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/pictureFIELD"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
+</FrameLayout>
