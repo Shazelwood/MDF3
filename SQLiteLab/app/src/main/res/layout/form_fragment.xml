@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:hint="First Name"
+        android:id="@+id/firstNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:hint="Last Name"
+        android:id="@+id/lastNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:inputType="date"
+        android:hint="Date"
+        android:id="@+id/hireDateET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:inputType="number"
+        android:hint="Pay Rate"
+        android:id="@+id/payRateET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:scaleType="center"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:id="@+id/pictureBTN"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_width="250dp"
+        android:layout_height="250dp" />
+
+
+
+</LinearLayout>
