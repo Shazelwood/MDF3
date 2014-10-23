@@ -2,6 +2,7 @@ package com.hazelwood.sqlitelab;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -58,8 +59,17 @@ public class DataHelper extends SQLiteOpenHelper {
         dataBase.insert(TABLE, null, contentValues);
     }
 
-    public void get(){
+    public void loadTable(){
         SQLiteDatabase dataBase = getReadableDatabase();
+
+        Cursor cursor = dataBase.query(TABLE, null, null, null, null, null, null);
+
     }
+
+    public void loadSection(){
+
+    }
+
+
 
 }

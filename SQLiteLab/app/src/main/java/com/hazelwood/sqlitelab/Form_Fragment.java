@@ -32,6 +32,7 @@ public class Form_Fragment extends Fragment {
     public static final String TAG = "FORMTAG";
     ImageView imageView;
     Uri file;
+    String imagePath;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -60,7 +61,7 @@ public class Form_Fragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        imagePath = "";
         setHasOptionsMenu(true);
         if (getArguments() != null) {
             mParam1 = getArguments().getDouble(ARG_PARAM1);
@@ -78,14 +79,8 @@ public class Form_Fragment extends Fragment {
         int id = item.getItemId();
         DataHelper helper = new DataHelper(getActivity());
 
-
-
-
         if (id == R.id.action_save) {
-
-            String imagePath = file.getPath();
-
-            Log.d(TAG, "SAVE");
+            Log.d(TAG, imagePath);
             EditText editText1 = (EditText) getActivity().findViewById(R.id.firstNameET);
             EditText editText2 = (EditText) getActivity().findViewById(R.id.lastNameET);
             EditText editText3 = (EditText) getActivity().findViewById(R.id.hireDateET);
@@ -150,14 +145,16 @@ public class Form_Fragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == REQUEST_CAMERA && resultCode != Activity.RESULT_CANCELED){
-            if (data == null){
-                imageView.setImageURI(file);
-                image = file;
-//                addImageToGallery(file);
-            } else {
+//            if (data == null){
+//                imageView.setImageURI(file);
+//                image = file;
+////                addImageToGallery(file);
+//            } else {
+//                Log.d(TAG, file.getPath());
+//                imagePath = file.getPath();
                 Bitmap thumb = (Bitmap)data.getParcelableExtra("data");
                 imageView.setImageBitmap(thumb);
-            }
+//            }
         }
     }
 
